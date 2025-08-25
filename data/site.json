@@ -1,0 +1,29 @@
+{
+  "brand": {
+    "name": "SOLICIT",
+    "accent": "#C5A572",
+    "accent2": "#9B7E4B",
+    "bg": "#0B0F1A",
+    "text": "#E5E7EB",
+    "muted": "#9CA3AF"
+  },
+  "contact": {
+    "email": "geral@solict.pt",
+    "whatsapp": "em atualização",
+    "address": "Rua Ciríaco Cardoso, 265-i\n4150-213 Porto"
+  },
+  "images": {
+    "logo": "/images/logo.svg",
+    "cover": "/images/cover.jpg",
+    "about": "/images/about.jpg",
+    "values": "/images/values.jpg",
+    "services": "/images/services.jpg",
+    "tech": "/images/tech.jpg",
+    "team": "/images/team.jpg",
+    "gallery": [
+      "/images/gallery-1.jpg",
+      "/images/gallery-2.jpg",
+      "/images/gallery-3.jpg"
+    ]
+  }
+}

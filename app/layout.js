@@ -1,4 +1,5 @@
 import './styles/globals.css'
+import config from '../data/site.json'
 
 export const metadata = {
   title: 'SOLICIT — Recuperação de Crédito e Serviços Jurídicos',
@@ -6,17 +7,24 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  const css = {
+    '--bg': config.brand.bg,
+    '--text': config.brand.text,
+    '--muted': config.brand.muted,
+    '--accent': config.brand.accent,
+    '--accent-2': config.brand.accent2,
+  }
   return (
     <html lang="pt">
-      <body>
+      <body style={css}>
         <nav className="nav">
           <div className="nav-inner container">
             <div className="brand">
-              <div className="brand-badge">SL</div>
-              <div className="brand-name">SOLICIT</div>
+              <div className="logo"><img src={config.images.logo} alt="logo" style={{width:36,height:36,borderRadius:10}}/></div>
+              <div className="brand-name">{config.brand.name}</div>
             </div>
             <div className="menu">
-              <a href="#bemvindo">Sobre</a>
+              <a href="#sobre">Sobre</a>
               <a href="#valores">Valores</a>
               <a href="#servicos">Serviços</a>
               <a href="#tecnologia">Tecnologia</a>
@@ -27,7 +35,7 @@ export default function RootLayout({ children }) {
         </nav>
         {children}
         <footer className="footer container">
-          © {new Date().getFullYear()} SOLICIT — Solicitadores e Advogados. Todos os direitos reservados.
+          © {new Date().getFullYear()} {config.brand.name}. Todos os direitos reservados.
         </footer>
       </body>
     </html>
